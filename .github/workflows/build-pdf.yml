@@ -9,7 +9,6 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
-          extra_system_packages: "font-eb-garamond"
           latexmk_use_xelatex: true
           root_file: sorrow_of_christ.tex
       - name: Upload PDF file
