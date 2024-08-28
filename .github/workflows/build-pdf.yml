@@ -16,3 +16,10 @@ jobs:
         with:
           name: PDF
           path: sorrow_of_christ.pdf
+       - name: Release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            sorrow_of_christ.tex
+            sorrow_of_christ.pdf
