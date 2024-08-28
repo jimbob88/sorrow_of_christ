@@ -9,6 +9,7 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
+          pre_compile: "tlmgr install ebgaramond scripture"
           latexmk_use_xelatex: true
           root_file: sorrow_of_christ.tex
       - name: Upload PDF file
